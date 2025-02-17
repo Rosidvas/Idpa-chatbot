@@ -13,6 +13,7 @@ List of required dependancies/libraries
 - Numpy
 - Pandas
 ### Application
+- keyboard
 - pyaudio
 - pyttsx3
 - SpeechRecognition
