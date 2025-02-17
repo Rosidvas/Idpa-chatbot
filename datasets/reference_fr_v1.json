@@ -1,0 +1,79 @@
+{
+    "intents":[
+        {
+            "patterns": ["Bonjour", "Salut", "Salutations"],
+            "tag": "greetings",
+            "responses": ["Bonjour {user}", "Bonjour", "Bonjour et Bienvenue"]
+        },
+        {
+            "patterns": ["Que fais tu","Que faites-vous","Quel est ton objectif","Quelles sont les tâches que vous accomplissez"],
+            "tag": "fonction",
+            "responses": ["superviser les chats et filtrer les contenus toxiques"]
+        },
+        {
+            "patterns": ["il faut aider", "aide moi", "pouvez vous m'aider", "J'ai demandé votre aide", "J'ai demandé votre aide"],
+            "tag": "aider",
+            "responses": ["Que puis-je faire pour aider ?", "Quel est le problème ?", "Oui, c'est ce qui semble être le problème?"]
+        },
+        {
+            "patterns": ["merci", "merci beaucoup", "merci bien"],
+            "tag": "gratitude",
+            "responses": ["J'ai le plaisir de vous aider", "Il n'y a pas de quoi"]
+        },
+        {
+            "patterns": ["test", "testing"],
+            "tag": "Testing",
+            "responses": ["Je vous entends très bien"]
+        },
+        {
+            "patterns": ["adieu", "au revoir"],
+            "tag": "farewell",
+            "responses": ["au revoir", "bye-bye monsieur, madame"]
+        },
+        {
+            "patterns": ["générer des informations d'identification", "générer des jetons", "créer des jetons"],
+            "tag": "createCreds",
+            "responses": ["créer des informations d'identification et des jetons", "générer des certificats d'identité"]
+        },
+        {
+            "patterns": ["rassembler tous les emails", "collecter tous les emails", "acquérir chaque e-mail"],
+            "tag": "getEmailsList",
+            "responses": ["Je rassemble tous les emails de la semaine dernière"] 
+        },
+        {
+            "patterns": ["compter tous les emails", "combien d'e-mails", "le nombre d'emails"],
+            "tag": "countEmails",
+            "responses": ["Il y a actuellement {count} emails de la semaine dernière"]
+        },
+        {
+            "patterns": ["compter les e-mails non lus", "combien de e-mails non lus", "le nombre d'emails non lus"],
+            "tag": "countUnreadEmails",
+            "responses": ["Il y a actuellement {count} emails non lus"]
+        },
+        {
+            "patterns":["rassembler tous les e-mails non lus", "collecter tous les emails non lus"],
+            "tag": "getUnreadEmailsList",
+            "responses":["Je rassemble tous les emails non lus de la semaine dernière."]
+        },
+        {
+            "patterns": ["sélectionner le numéro de l'e-mail", "choisir un numéro d'adresse email", "choisir email"],
+            "tag": "selectEmail",
+            "responses": ["email d'ouverture", "Je collecte les informations sur les emails"]
+        },
+        {
+            "patterns": ["sélectionner le numéro de l'e-mail non lu", "choisir un numéro d'adresse email non lu", "choisir email non lu"],
+            "tag": "selectUnreadEmail",
+            "responses": ["ouverture d'email non lu", "ouverture d'un email non lu"]
+        },
+        {
+            "patterns": ["lire l'émail sélectionné", "ouvrir et lire cet email", "ouvrir cet email"],
+            "tag": "readEmail",
+            "responses": ["Sujet: {subject}, de {sender}. Voici l'extrait du texte. {snippet}"]  
+        },
+        {
+            "patterns": ["Marquer son email actuel", "Marquer l'e-mail comme lu", "marquer comme lu"],
+            "tag": "markEmailAsRead",
+            "responses": ["Je vais marquer le e-mail actuel comme lu", "Oui, je marque l'e-mail."]
+        }
+    ]
+}

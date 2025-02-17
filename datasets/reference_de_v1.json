@@ -1,0 +1,75 @@
+{
+    "intents":[
+        {
+            "patterns": ["Guten Tag","Moin","Guten Morgen","Guten Abend","Grüezi","Hallo","Guten Abend","Grüß dich"],
+            "tag": "Begrussung",
+            "responses": ["Guten Tag {user}", "Hallo {user}", "Schönen guten Tag {user}!"]  
+        },
+        {
+            "patterns": ["Ich brauche Hile", "du helfen", "hilf mir"],
+            "tag": "Hilfe",
+            "responses": ["Ja Natürlich!", "Was brauchst du?", "Absolut!"]
+        },
+        {
+            "patterns": ["test", "kannst du mich hören"],
+            "tag": "Testing",
+            "responses": ["Ich kann dich laut und deutlich hören"]
+        },
+        {
+            "patterns": ["Tschüss","Auf Wiedersehen", "Bis bald", "Bis dann", "Bis zum nächsten Mal", "Wiedersehen", "Einen schönen Tag noch", "Bis später dann"],
+            "tag": "Verabschiedung",
+            "responses": ["Machs gut und bis zum nächsten Mal {user}", "Es war schön, mit dir zu sprechen", "Einen schönen Tag noch und bis bald {user}"]
+        },
+        {
+            "patterns": ["Was machst du", "Was kannst du für mich erledigen", "deine Hauptziele", "deine Ziele", "deine Aufgaben"],
+            "tag": "Arbeit",
+            "responses": ["Ich bin hier, um Ihnen als KI-Assistent zu helfen", 
+                        "Ich erledige Ihre täglichen Aufgaben"]
+        },
+        {
+            "patterns": ["Danke", "Dankeschön", "Dank", "Vielen Dank"],
+            "tag": "Dankbarkeit",
+            "responses": ["Ich bin immer da, um zu helfen!", "Ich bin immer für Sie da!"]
+        },
+        {
+            "patterns": ["Alle E-Mails erhalten", "sammeln jede email"],
+            "tag": "getEmailsList",
+            "responses": ["Na gut, ich sammle alle Emails", "Natürlich Erfassen aller Emails"]
+        },
+        {
+            "patterns": ["Ungelesene emails sammeln", "Ungelesen emails erhalten"],
+            "tag": "getUnreadEmailsList",
+            "responses": ["Natürlich Erfassen aller ungelesene Emails"]
+        },
+        {
+            "patterns": ["Zählen Sie jede E-Mail", "Jede emails zählen", "Aller Emails zählen", "Wie viele emails gibt es"],
+            "tag": "countEmails",
+            "responses": ["Es gibt derzeit {count} Anzahl von E-Mails"]
+        },
+        {
+            "patterns": ["Zählen aller ungelesenen E-Mails", "Erhalten aller ungelesenen Emails", "Wie viele ungelesene emails gibt es"],
+            "tag": "countUnreadEmails",
+            "responses": ["Es gibt derzeit {count} ungelesene E-Mails"]
+        },
+        {
+            "patterns": ["Wählen Email nummer", "email abrufen", "email nummer auswählen"],
+            "tag": "selectEmail",
+            "responses": ["Ich habe die E-Mail ausgewählt"]
+        },
+        {
+            "patterns": ["Wähle ungelesene Email nummer", "ungelesene email abrufen"],
+            "tag": "selectUnreadEmail",
+            "responses": ["Ich habe die ungelesene E-Mail Nummer {count} ausgewählt."]
+        },
+        {
+            "patterns": ["email öffnen und lesen", "ausgewählte E-Mail lesen", "Öffnen dieser aktuellen E-Mail"],
+            "tag": "readEmail",
+            "responses": ["Subjekt: {subject} von {sender} Hier noch ein Textausschnitt: {snippet}"]
+        },
+        {
+            "patterns": ["Als gelesen markieren"],
+            "tag": "markEmailAsRead",
+            "responses": ["E-Mail derzeit als gelesen markieren"]
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "intents":[
+        {
+            "patterns": ["Hi", "How are you?", "Is anyone there?", "Hello", "Good day", "What's up", "how are ya", "hey","what's up"],
+            "tag": "greetings",
+            "responses": ["Greeting {user}", "Hello {user}", "It's good to see you again {user}"]  
+        },
+        {
+            "patterns": ["What do you do", "what is your purpose", "what is your function", "what tasks do you handle", "What can you do"],
+            "tag": "purpose",
+            "responses": ["I am your personal AI assistant", "I am your AI assistant, task to handling your Emails and many more if you develop me further {user}", 
+                            "At the moment, I only have the ability to manage your emails"]
+        },
+        {
+            "patterns":["I need your help", "I require assisstance", "help me", "assist me"],
+            "tag": "help",
+            "responses": ["What's the problem?", "What can I do to help"]
+        },
+        {
+            "patterns": ["test","testing","can you hear me"],
+            "tag": "Testing",
+            "responses": ["I can hear you loud and clear!"]
+        },
+        {
+            "patterns": ["thankyou", "thanks", "ty", "appreciate it"],
+            "tag": "gratitude",
+            "responses": ["I am always here to help!", "You're welcome {user}", "Happy to help!"]
+        },
+        {
+            "patterns": ["farewell","cya", "see you", "bye bye", "See you later", "Goodbye", "I am Leaving", "Bye", "Have a Good day", "talk to you later", "ttyl", "I got to go", "gtg"],
+            "tag": "farewell",
+            "responses": ["See you later {user}", "Goodbye {user}", "Farewell {user}"]
+        },
+        {
+            "patterns": ["establish identification", "start identification verification", "establish credentials",
+                        "start verification"],
+            "tag": "createCreds",
+            "responses": ["Creating credentials", "Generating credentials", "Creating token", "Generating token"]
+        },
+        {
+            "patterns": ["Get a list of all emails", "gather every emails", "collect every email"],
+            "tag": "getEmailsList",
+            "responses": ["Checking the current amount of Emails accumulated within the last week",
+                            "I have gathered the Emails from the last week"]
+        },
+        {
+            "patterns": ["Get a list of unread emails", "gather unread", "get a list of unread email", "collect unread"],
+            "tag": "getUnreadEmailsList",
+            "responses": ["checking the current amount of unread Emails", "Listing the amount of unread emails"]
+        },
+        {
+            "patterns": ["Count every emails", "count emails", "count letters", "how many emails"],
+            "tag": "countEmails",
+            "responses": ["There are currently {count} Emails accumulated in the past week"]
+        }, 
+        {
+            "patterns": ["Count unread", "how many unread", "count unread letters", "count unread emails"],
+            "tag": "countUnreadEmails",
+            "responses": ["There are currently {count} unread Emails accumulated in the past week"]
+        },
+        {
+            "patterns": ["can you check Email", "Check Email number", "Check Email", "pick out current Email", "choose email"],
+            "tag": "selectEmail",
+            "responses": ["Selecting Email {email}", "Picking Email {email}", "Getting Email {email}"]
+        },
+        {
+            "patterns": ["pick unread email", "check unread email", "pick out unread email"],
+            "tag": "selectUnreadEmail",
+            "responses": ["selecting unread email {count}", "picking out unread email {count}"]
+        },
+        {
+            "patterns": ["read current email", "read that", "Open this Email"],
+            "tag": "readEmail",
+            "responses": ["{subject}, from {sender}. Here is the snippet. {snippet}"] 
+        },
+        {
+            "patterns": ["mark email as read", "set it as read", "mark it"],
+            "tag": "markEmailAsRead",
+            "responses": ["marking current Email", "setting Email as read"]
+        }
+
+    ]
+
+}
