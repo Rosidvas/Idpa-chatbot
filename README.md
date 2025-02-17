@@ -1,17 +1,19 @@
 # IDPA-2025-chatbot
 
 ## Description
-This is a public repository for the IDPA AI chatbot assistant. This repo will contain structure of the code including the training code and AI models.
+This is a public repository for the IDPA AI chatbot assistant. This repo will contain structure of the code including the training code and DL models.
 
 ## Dependancies
 List of required dependancies/libraries 
-### ML/DL 
+### Data extracting and Model training
+- Matplotlib
+- Scikit-learn
 - Tensorflow
 - NLTK
 - Numpy
 - Pandas
-### Input/Output
+### Application
 - pyaudio
 - pyttsx3
 - SpeechRecognition
-- 
+- Google API
