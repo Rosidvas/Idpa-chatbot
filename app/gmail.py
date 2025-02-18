@@ -26,7 +26,7 @@ def create_credentials():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(               
-                # your creds file here. Please create json file as here https://cloud.google.com/docs/authentication/getting-started
+                # your creds file here.
                 'credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
@@ -109,53 +109,8 @@ def readOpenMessage(msg):
     snippet = msg['snippet']
 
     return subject, sender, snippet
- 
-#Query Time in Date
-def searchDateTime(creds, dateTime):
-    unreadEmailList = []
-    query=f"in:inbox in:sent after:{dateTime[0]} before:{dateTime[1]}"
-    try:
-        service = build('gmail', 'v1', credentials=creds)
-        results = service.users().messages().get(userId='me', labelIds=['INBOX'], q=query)
-        messages = results.get("messages", [])
-        
-        if not messages:
-            print("all messages read")
-        else:
-            for message in messages:
-                unreadEmailList.append(message['id'])
-        return unreadEmailList
 
-    except Exception as error:
-        print(f'An error occured {error}')
-
-def getNotification(creds):
-    try:
-        service = build('gmail', 'v1', credentials=creds)
-        
-        request = {
-            'labelIds': ['INBOX'],
-            'topicName': '',
-            'labelFilterBehaviour': 'INCLUDE'
-        }
-    except Exception as error:
-        return 
-    #gmail.users().watch(userId='me', body=request.execute())
-    return
-
-def findSenderEmails(creds, msgId, sender):
-    try:
-        service = build('gmail', 'v1', credentials=creds)
-        result = service.users().messages().get(userId='me', id=[msgId], format='full').execute()
-        header = result["payload"]["headers"]
-        sender = [i['value'] for i in header if i['name']=="From"]
-        print("header caught")
-        print(sender)
-    except Exception as error:
-        print(f'An error occured {error}')
-    return
-
-
+#Testing Email Functions
 def test():
     creds = create_credentials()
     
@@ -168,8 +123,6 @@ def test():
         message = getMessage(unread_list, creds, email)
         readMessage(message)
     
-
-
 #test()
 
 # Acquire all unread %
